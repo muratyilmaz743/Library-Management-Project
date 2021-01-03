@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Library.loginController">
+   <left>
+      <ImageView fitHeight="500.0" fitWidth="197.0" opacity="0.74" pickOnBounds="true" smooth="false" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../images/libraryBck.jpg" />
+         </image>
+      </ImageView>
+   </left>
+   <center>
+      <Pane prefHeight="500.0" prefWidth="526.0" style="-fx-background-color: #EFDFDC;" BorderPane.alignment="CENTER">
+         <children>
+            <Hyperlink fx:id="forgotPass" layoutX="216.0" layoutY="359.0" text="Forgot Password?" />
+            <FontIcon fill="#c67643" iconLiteral="typ-user" iconSize="30" layoutX="159.0" layoutY="203.0" />
+            <FontIcon fill="#c67643" iconLiteral="typ-key" iconSize="30" layoutX="158.0" layoutY="255.0" />
+            <FontIcon fill="#c67643" iconLiteral="typ-group" iconSize="40" layoutX="248.0" layoutY="150.0" />
+            <TextField fx:id="userNameTxtbox" layoutX="193.0" layoutY="182.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #c67643; -fx-border-width: 0 0 1 0;" />
+            <PasswordField fx:id="passTxtbox" layoutX="193.0" layoutY="234.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #c67643; -fx-border-width: 0 0 1 0;" />
+            <Button fx:id="loginBTN" layoutX="241.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#deploy" style="-fx-background-color: #c67643;" text="Login" />
+            <Button fx:id="loginGuest" layoutX="243.0" layoutY="431.0" mnemonicParsing="false" onAction="#deployGuest" text="Guest" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

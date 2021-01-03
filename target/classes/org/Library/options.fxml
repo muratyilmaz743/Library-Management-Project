@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="927.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Library.optionsController">
+  <tabs>
+    <Tab closable="false" style="-fx-background-color: #857D8E; -fx-border-width: 5 5 5 5;" text="Searching">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF6F4;">
+               <children>
+                  <Pane layoutX="-1.0" layoutY="2.0" prefHeight="450.0" prefWidth="341.0" style="-fx-background-color: linear-gradient(to left, #fff6f4, #eee2e1, #dcced0, #c9bbc0, #b6a8b1);;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="519.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField layoutX="114.0" layoutY="66.0" promptText="Book Name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                        <FontIcon iconLiteral="typ-bookmark" iconSize="30" layoutX="83.0" layoutY="141.0" text="" />
+                        <FontIcon iconLiteral="typ-book" iconSize="30" layoutX="81.0" layoutY="86.0" />
+                        <TextField layoutX="114.0" layoutY="117.0" promptText="Author" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                        <TextField layoutX="114.0" layoutY="165.0" promptText="Genre" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                        <FontIcon iconLiteral="typ-sort-alphabetically" iconSize="30" layoutX="78.0" layoutY="186.0" />
+                        <Button layoutX="147.0" layoutY="222.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="48.0">
+                           <graphic>
+                              <FontIcon iconLiteral="typ-zoom-outline" iconSize="25" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+      </content>
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="476.8" minWidth="10.0" prefWidth="461.59998779296876" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="660.8" minWidth="10.0" prefWidth="466.40001220703124" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="450.0" prefWidth="403.0" style="-fx-background-color: linear-gradient(to left, #fff6f4, #eee2e1, #dcced0, #c9bbc0, #b6a8b1);;">
+                     <children>
+                        <TextField fx:id="srchTitleText" layoutX="59.0" layoutY="197.0" promptText="Title" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                        <FontIcon iconLiteral="typ-book" iconSize="25" layoutX="22.0" layoutY="217.0" />
+                        <FontIcon layoutX="95.0" layoutY="67.0" />
+                        <FontIcon iconLiteral="typ-bookmark" iconSize="30" layoutX="113.0" layoutY="55.0" />
+                        <Label layoutX="95.0" layoutY="63.0" text="Search" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="srchBookBTN" layoutX="103.0" layoutY="384.0" mnemonicParsing="false" onAction="#searchBook" prefHeight="32.0" prefWidth="37.0">
+                           <graphic>
+                              <FontIcon iconLiteral="typ-zoom-outline" iconSize="22" wrappingWidth="17.800024032592773" />
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="reservationInput" layoutX="280.0" layoutY="220.0" promptText="User ID" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                        <Button fx:id="rezBookBTN" layoutX="322.0" layoutY="263.0" mnemonicParsing="false" onAction="#rezBook" prefHeight="32.0" prefWidth="37.0">
+                           <graphic>
+                              <FontIcon iconLiteral="typ-tick" iconSize="25" wrappingWidth="17.800024032592773" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="294.0" layoutY="183.0" text="Reservation" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <FontIcon iconLiteral="typ-book" iconSize="30" layoutX="329.0" layoutY="175.0" />
+                        <FontIcon iconLiteral="typ-business-card" iconSize="22" layoutX="251.0" layoutY="239.0" />
+                        <Line endX="0.4000244140625" endY="307.6000061035156" layoutX="230.0" layoutY="142.0" startX="0.4000244140625" startY="-142.0" />
+                        <TextField fx:id="srchAuthorText" layoutX="58.0" layoutY="268.0" promptText="Author" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                        <FontIcon iconLiteral="typ-user-outline" iconSize="28" layoutX="24.0" layoutY="289.0" text="" />
+                        <Label fx:id="resLabel" layoutX="229.0" layoutY="313.0" prefHeight="17.0" prefWidth="230.0" textAlignment="CENTER" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="450.0" prefWidth="474.0" style="-fx-background-color: #FFF6F4;" GridPane.columnIndex="1">
+                     <children>
+                        <TableView fx:id="srchTable" layoutX="-3.0" prefHeight="449.0" prefWidth="472.0" style="-fx-background-color: transparent;">
+                          <columns>
+                            <TableColumn prefWidth="101.60003358125687" text="Name" />
+                            <TableColumn prefWidth="86.39996337890625" text="Author" />
+                              <TableColumn prefWidth="90.40008544921875" text="Genre" />
+                              <TableColumn prefWidth="126.39996337890625" text="Date" />
+                              <TableColumn minWidth="0.0" prefWidth="67.800048828125" text="State" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+         </content>
+    </Tab>
+      <Tab style="-fx-background-color: #857D8E;" text="User">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF6F4;">
+               <children>
+                  <TableView fx:id="userTable" layoutX="264.0" layoutY="-1.0" prefHeight="454.0" prefWidth="407.0" style="-fx-background-color: transparent;">
+                    <columns>
+                      <TableColumn prefWidth="157.60003662109375" text="User Name" />
+                      <TableColumn prefWidth="176.0" text="User ID" />
+                        <TableColumn prefWidth="75.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="userName" layoutX="75.0" layoutY="143.0" promptText="User ID" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                  <Button fx:id="srchUserBTN" layoutX="130.0" layoutY="289.0" mnemonicParsing="false" onAction="#srchUser" prefHeight="32.0" prefWidth="37.0">
+                     <graphic>
+                        <FontIcon iconLiteral="typ-zoom-outline" iconSize="22" wrappingWidth="17.800024032592773" />
+                     </graphic>
+                  </Button>
+                  <FontIcon iconLiteral="typ-group" iconSize="30" layoutX="135.0" layoutY="92.0" />
+                  <Button fx:id="blockUsrBtn" layoutX="777.0" layoutY="237.0" mnemonicParsing="false" onAction="#blockUn" text="Block  User" />
+                  <Button fx:id="ublckUsBtn" layoutX="771.0" layoutY="156.0" mnemonicParsing="false" onAction="#unblock" text="Unblock User" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab style="-fx-background-color: #857D8E;" text="Add User">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF6F4;">
+               <children>
+                  <TextField fx:id="addUserNm" layoutX="386.0" layoutY="133.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                  <FontIcon iconLiteral="typ-user-add" iconSize="30" layoutX="449.0" layoutY="99.0" />
+                  <FontIcon iconLiteral="typ-user-outline" iconSize="25" layoutX="355.0" layoutY="153.0" />
+                  <Button fx:id="addUserBTN" layoutX="427.0" layoutY="282.0" mnemonicParsing="false" onAction="#addUser" text="Add User" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab style="-fx-background-color: #857D8E;" text="Add Book">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF6F4;">
+               <children>
+                  <TextField fx:id="addBookName" layoutX="254.0" layoutY="132.0" promptText="Book Name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                  <TextField fx:id="addAuthorName" layoutX="254.0" layoutY="226.0" promptText="Author" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                  <TextField fx:id="addDate" layoutX="525.0" layoutY="226.0" promptText="Date" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                  <FontIcon iconLiteral="typ-book" iconSize="25" layoutX="319.0" layoutY="124.0" />
+                  <FontIcon iconLiteral="typ-user-outline" iconSize="28" layoutX="312.0" layoutY="219.0" text="" />
+                  <FontIcon iconLiteral="typ-th-large" iconSize="25" layoutX="590.0" layoutY="126.0" text="" />
+                  <FontIcon iconLiteral="typ-calendar" iconSize="25" layoutX="590.0" layoutY="219.0" text="" />
+                  <Button fx:id="addBookBTN" layoutX="428.0" layoutY="378.0" mnemonicParsing="false" onAction="#addBook" text="Add Book" />
+                  <FontIcon iconLiteral="typ-sort-alphabetically" iconSize="35" layoutX="447.0" layoutY="308.0" />
+                  <ComboBox fx:id="addGenre" layoutX="524.0" layoutY="133.0" prefWidth="150.0" promptText="Genre" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" visibleRowCount="5">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="ACTION" />
+                            <String fx:value="CLASSICS" />
+                            <String fx:value="MYSTERY" />
+                            <String fx:value="FANTASY" />
+                            <String fx:value="HISTORICAL" />
+                        </FXCollections>
+                    </items>
+                  </ComboBox>
+                   <ComboBox fx:id="addLang" layoutX="396.0" layoutY="317.0" prefWidth="150.0" promptText="Language" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" visibleRowCount="5">
+                       <items>
+                           <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="English" />
+                               <String fx:value="Turkish" />
+                               <String fx:value="French" />
+                               <String fx:value="German" />
+                           </FXCollections>
+                       </items>
+                   </ComboBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab style="-fx-background-color: #857D8E;" text="Loaned Books">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFF6F4;">
+               <children>
+                  <TableView fx:id="userTable1" layoutX="443.0" layoutY="-3.0" prefHeight="454.0" prefWidth="122.0" style="-fx-background-color: transparent;">
+                     <columns>
+                        <TableColumn prefWidth="121.5999755859375" text="ISBN" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="rtrnUserID" layoutX="169.0" layoutY="160.0" promptText="User ID" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0 0 1 0;" />
+                  <Button fx:id="rtrnUserBTN" layoutX="224.0" layoutY="209.0" mnemonicParsing="false" onAction="#srchRtrnUser" prefHeight="32.0" prefWidth="37.0">
+                     <graphic>
+                        <FontIcon iconLiteral="typ-zoom-outline" iconSize="22" wrappingWidth="17.800024032592773" />
+                     </graphic>
+                  </Button>
+                  <FontIcon iconLiteral="typ-group" iconSize="30" layoutX="229.0" layoutY="109.0" />
+                  <Button fx:id="rtrnBtn" layoutX="202.0" layoutY="274.0" mnemonicParsing="false" onAction="#returnBook" text="Return Book" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
