@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Library Manager 👋</h1>
+<h1 align="center">Welcome to Library Manager :books: </h1>
 <p>
 </p>
 
