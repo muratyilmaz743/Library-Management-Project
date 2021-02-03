@@ -9,7 +9,7 @@
 👤 **Murat YILMAZ**
 
 * Github: [@muratyilmaz743](https://github.com/muratyilmaz743)
-* LinkedIn: [@Murat Yılmaz](www.linkedin.com/in/muratYillmaz)
+* LinkedIn: [@Murat Yılmaz](www.linkedin.com/in/MuratYillmaz)
 
 ## Show your support
 
