@@ -8,8 +8,8 @@
 
 👤 **Murat YILMAZ**
 
-* Github: [@muratyilmaz743](https://github.com/muratyilmaz743)
-* LinkedIn: [@Murat Yılmaz](www.linkedin.com/in/MuratYillmaz)
+* 	https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white https://github.com/muratyilmaz743
+* https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white www.linkedin.com/in/MuratYillmaz
 
 ## Show your support
 
